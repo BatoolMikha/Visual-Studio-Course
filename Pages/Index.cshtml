@@ -1,0 +1,144 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Video Page</title>
+
+    <!-- External Google Fonts for a unique style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- External CSS for customization -->
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            animation: typing 4s steps(40) 1s forwards, colorChange 3s infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        /* Gradient background animation */
+        @@keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Typing effect for the h1 */
+        @@keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Color change animation for the h1 */
+        @@keyframes colorChange {
+            0% {
+                color: #ff7e5f;
+            }
+            50% {
+                color: #feb47b;
+            }
+            100% {
+                color: #ff7e5f;
+            }
+        }
+
+        .video-container {
+            margin: 30px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        .video-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 1.2em;
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design for Mobile */
+        @@media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+                letter-spacing: 1px;
+            }
+
+            .video-container {
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Page heading with typing effect -->
+    <h1>My Favorite Music Video</h1>
+
+    <!-- Embed YouTube Music Video -->
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BtdBQ1-fzXM?si=mb3iFn-CkBxbsTon" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Optional footer -->
+    <div class="footer">
+        <p>Enjoy the vibes! 🎶</p>
+    </div>
+
+    <!-- JavaScript for any additional interactivity -->
+    <script>
+        // You can add any interactive scripts here, such as event listeners or animations
+    </script>
+
+</body>
+</html>
